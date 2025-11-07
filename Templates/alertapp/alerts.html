@@ -1,0 +1,40 @@
+{% extends 'alertapp/base.html' %}
+{% block content %}
+<body>
+     <h1>This is alert App Page</h1><br><br>
+
+     <a href="{% url 'info'%}">Info</a>
+     <a href="{% url 'success'%}"> Success</a>
+     <a href="{% url 'warning'%}">Warning</a>
+     <a href="{% url 'error'%}">Error</a>
+
+     <div>
+         {% for msg in messages %}
+         <div class="alert alert-primary" role="alert"><h2><strong>{{msg}}</strong></h2></div>
+         {% endfor %}
+     </div>
+     <div>
+         {% for msg in messages %}
+         <div class="alert alert-danger" role="alert"><h2><strong>{{msg}}</strong></h2></div>
+         {% endfor %}
+     </div>
+     <div>
+         {% for msg in messages %}
+         <div class="alert alert-warning" role="alert"><h2><strong>{{msg}}</strong></h2></div>
+         {% endfor %}
+     </div>
+     <div>
+         {% for msg in messages %}
+         <div class="alert alert-info" role="alert"><h2><strong>{{msg}}</strong></h2></div>
+         {% endfor %}
+     </div>
+     <div>
+         {% for msg in messages %}
+         <div class="alert alert-secondary" role="alert"><h2><strong>{{msg}}</strong></h2></div>
+         {% endfor %}
+     </div>
+
+
+
+</body>
+{% endblock %}

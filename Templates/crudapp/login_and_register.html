@@ -1,0 +1,15 @@
+{% extends 'crudapp/home.html'%}
+{% block content %}
+
+{% if page == "login" %}
+
+<form method="POST">
+    {% csrf_token %}
+    Username:<input type="text" id="username" name="username"><br><br>
+    Password:<input type="text" id="password" name="password"><br><br>
+    <input type="submit" value="LOGIN">
+</form>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends  'crudapp/home.html' %}
+{% block content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'css/alldetails.css'%}">
+</head>
+<body>
+<form action="{% url 'search' %}">
+  <input type="text" id="search" name="search">
+  <input type="submit" value="Search">
+</form>
+<h2>We have total {{count}} employees currently </h2>
+<table>
+  <tr>
+    <th>Unique Id</th>
+    <th>Id</th>
+    <th>Employee Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>City</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
+
+  </tr>
+  {% for emp in employees %}
+  <tr>
+    <td>{{emp.id}}</td>
+    <td>{{emp.empid}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.phonenumber}}
+    <td>{{emp.city}}</td>
+    <td><a href="{% url 'update' emp.id %}"><button>EDIT</button></a></td>
+    <td><a href="{% url 'delete' emp.id %}"><button>DELETE</button></a></td>
+
+
+
+  </tr>
+  {% endfor%}
+</table>
+<a href="{% url 'post' %}"><button>Create Employee </button></a>
+</body>
+</html>
+{% endblock %}

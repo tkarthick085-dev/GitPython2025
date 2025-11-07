@@ -1,0 +1,14 @@
+{% extends  'crudapp/home.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    Employee Id:<input type="text" id="empid" name="empid" value="{{emp.empid}}"><br><br>
+    Name:<input type="text" id="name" name="name" value="{{emp.name}}"><br><br>
+    Email:<input type="text" id="email" name="email" value="{{emp.email}}"><br><br>
+    Phone Number:<input type="text" id="phonenumber" name="phonenumber" value="{{emp.phonenumber}}"><br><br>
+    City:<input type="text" id="city" name="city" value="{{emp.city}}"><br><br>
+    <input type="submit" value="Update">
+
+
+</form>
+{% endblock %}

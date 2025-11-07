@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUDApp</title>
+</head>
+<body>
+{% include 'crudapp/logo.html' %}
+{% if messages %}
+{% for msg in messages %}
+   {{msg}}
+{% endfor %}
+{% endif %}
+{% block content %}
+{% endblock %}
+</body>
+</html>

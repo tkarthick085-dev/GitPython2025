@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL TABLE</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ipl.css'%}">
+</head>
+<body>
+<h1><strong>IPL TABLE</strong></h1>
+<h2>This year of ipl is sponsored by {{name}}</h2>
+<h3>This table is updated at {{date}}</h3>
+
+<table class="customTable">
+    <thead>
+    <tr>
+        <th>Position</th>
+        <th>Team Name</th>
+        <th>Matches Played</th>
+        <th>Won</th>
+        <th>Loss</th>
+        <th>Points</th>
+        <th>NRR</th>
+    </tr>
+    </thead>
+    <tr>
+        <th>1</th>
+        <th>MI</th>
+        <th>10</th>
+        <th>7</th>
+        <th>3</th>
+        <th>14</th>
+        <th>+1.355</th>
+
+
+    </tr>
+    <tr>
+        <th>2</th>
+        <th>RCB</th>
+        <th>10</th>
+        <th>6</th>
+        <th>4</th>
+        <th>12</th>
+        <th>+1.235</th>
+
+
+    </tr>
+</table>
+<br>
+<img src="{% static 'images/ipl1.jpg' %}" alt="Tata Logo" height="200">
+
+
+
+</body>
+</html>
